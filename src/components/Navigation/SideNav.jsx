@@ -1,4 +1,5 @@
 import React from "react";
+import "../../assets/styles/sidenav.scss";
 import Overview from "../../assets/icons/overview.svg";
 import Payments from "../../assets/icons/payments.svg";
 import ReconciledPayments from "../../assets/icons/reconciled-payments.svg";

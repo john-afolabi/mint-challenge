@@ -1,7 +1,13 @@
 import React from "react";
+import "./assets/styles/app.scss";
+import TopNav from "./components/Navigation/TopNav";
 
 function App() {
-	return <></>;
+	return (
+		<>
+			<TopNav />
+		</>
+	);
 }
 
 export default App;

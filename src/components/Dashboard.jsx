@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/styles/dashboard.scss";
 import SmallChart from "../assets/icons/small-chart.svg";
 
 const Dashboard = () => {

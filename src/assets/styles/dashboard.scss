@@ -1,0 +1,42 @@
+div.dashboard {
+	position: absolute;
+	top: 60px;
+	left: 260px;
+	padding: 50px;
+	width: calc(100vw - 360px);
+
+	section.summary {
+		div.quick_summary {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				background: #ffffff;
+				border: 1px solid #eef8fd;
+				box-sizing: border-box;
+				border-radius: 2px;
+				padding: 0 15px;
+				margin-bottom: 30px;
+				width: 300px;
+
+				p {
+					font-size: 1.8rem;
+					margin-right: 20px;
+					color: #262626;
+					line-height: 24px;
+					font-weight: 600;
+					span {
+						font-size: 1.2rem;
+						font-weight: 400;
+						color: #787c90;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "../../assets/icons/search.svg";
 import Bell from "../../assets/icons/bell.svg";
+import "../../assets/styles/topnav.scss";
 
 // -----------------------------------------------
 // From Endpoint
@@ -21,10 +22,10 @@ const TopNav = () => {
 			<nav className="top_nav">
 				<ul>
 					<li>
-						<a href="#">Support</a>
+						<a href="#support">Support</a>
 					</li>
 					<li>
-						<a href="#">FAQ</a>
+						<a href="#faq">FAQ</a>
 					</li>
 					<li>
 						<div className="notification">

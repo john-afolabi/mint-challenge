@@ -1,4 +1,5 @@
 import React from "react";
+import SmallChart from "../assets/icons/small-chart.svg";
 
 const Dashboard = () => {
 	return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
 							<br />
 							2342
 						</p>
+						<img src={SmallChart} alt="daily transaction volume" />
 					</div>
 
 					<div>
@@ -19,6 +21,7 @@ const Dashboard = () => {
 							<br />
 							₦4,000,000
 						</p>
+						<img src={SmallChart} alt="daily transaction value" />
 					</div>
 
 					<div>
@@ -27,6 +30,7 @@ const Dashboard = () => {
 							<br />
 							452,000
 						</p>
+						<img src={SmallChart} alt="total transaction volume" />
 					</div>
 
 					<div>
@@ -35,6 +39,7 @@ const Dashboard = () => {
 							<br />
 							₦4,000,000
 						</p>
+						<img src={SmallChart} alt="total transaction value" />
 					</div>
 				</div>
 			</section>

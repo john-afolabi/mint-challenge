@@ -1,6 +1,8 @@
 import React from "react";
 import "../assets/styles/dashboard.scss";
 import SmallChart from "../assets/icons/small-chart.svg";
+import LeftButton from "../assets/icons/left-button.svg";
+import RightButton from "../assets/icons/right-button.svg";
 
 const Dashboard = () => {
 	return (
@@ -53,7 +55,10 @@ const Dashboard = () => {
 									<option>1 Jan - 1 Jun</option>
 									<option>1 Jan - 1 Jun</option>
 								</select>
-								<div></div>
+								<div>
+									<img src={LeftButton} alt="left-button" />
+									<img src={RightButton} alt="right-button" />
+								</div>
 							</div>
 						</div>
 						<div className="data_chart"></div>
@@ -62,9 +67,26 @@ const Dashboard = () => {
 					<div className="main_summary_right">
 						<div className="main_summary_card">
 							<h4>Orders</h4>
-
-							<hr />
-							<hr />
+							{/* -------------------------------------------------
+                                Inline styles so the width can be set dynamically
+                                -------------------------------------------------
+                                */}
+							<hr
+								style={{
+									width: "80%",
+									backgroundColor: "#27AE60",
+									borderTopLeftRadius: "2px",
+									borderBottomLeftRadius: "2px",
+								}}
+							/>
+							<hr
+								style={{
+									width: "20%",
+									backgroundColor: "#FDC203",
+									borderTopRightRadius: "2px",
+									borderBottomRightRadius: "2px",
+								}}
+							/>
 							<p>Pending Orders:</p>
 							<p>Reconciled Orders:</p>
 							<p>Total Orders:</p>
@@ -72,9 +94,26 @@ const Dashboard = () => {
 
 						<div className="main_summary_card">
 							<h4>Payments</h4>
-
-							<hr />
-							<hr />
+							{/* -------------------------------------------------
+                                Inline styles so the width can be set dynamically
+                                -------------------------------------------------
+                                */}
+							<hr
+								style={{
+									width: "80%",
+									backgroundColor: "#27AE60",
+									borderTopLeftRadius: "2px",
+									borderBottomLeftRadius: "2px",
+								}}
+							/>
+							<hr
+								style={{
+									width: "20%",
+									backgroundColor: "#FDC203",
+									borderTopRightRadius: "2px",
+									borderBottomRightRadius: "2px",
+								}}
+							/>
 							<p>Un-reconciled Payments:</p>
 							<p>Reconciled Payments:</p>
 							<p>Total Payments:</p>

@@ -3,6 +3,7 @@ import "../assets/styles/dashboard.scss";
 import SmallChart from "../assets/icons/small-chart.svg";
 import LeftButton from "../assets/icons/left-button.svg";
 import RightButton from "../assets/icons/right-button.svg";
+import Chart from "./Chart";
 
 const Dashboard = () => {
 	return (
@@ -61,7 +62,9 @@ const Dashboard = () => {
 								</div>
 							</div>
 						</div>
-						<div className="data_chart"></div>
+						<div className="data_chart">
+							<Chart />
+						</div>
 					</div>
 
 					<div className="main_summary_right">

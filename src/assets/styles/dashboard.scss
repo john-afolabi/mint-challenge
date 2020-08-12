@@ -38,5 +38,67 @@ div.dashboard {
 				}
 			}
 		}
+
+		div.main_summary {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			height: 380px;
+
+			div.main_summary_left {
+				width: 60.5%;
+				background: #ffffff;
+				border: 1px solid #eef8fd;
+				box-sizing: border-box;
+				border-radius: 2px;
+
+				div.main_summary_filter {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 5px 30px;
+
+					div {
+						display: flex;
+						justify-content: center;
+						select {
+							font-size: 1.2rem;
+							color: #7f8fa4;
+							border: 1px solid #dde0e3;
+							border-radius: 4.25px;
+							padding: 7px 20px;
+							margin-right: 40px;
+						}
+					}
+				}
+
+				div.data_chart {
+					margin-top: 30px;
+				}
+			}
+
+			div.main_summary_right {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 39%;
+
+				div {
+					background: #ffffff;
+					border: 1px solid #eef8fd;
+					box-sizing: border-box;
+					border-radius: 2px;
+					font-size: 1.4rem;
+					padding: 0 25px;
+					height: 185px;
+
+					hr {
+						height: 4px;
+						display: inline-block;
+						border: none;
+					}
+				}
+			}
+		}
 	}
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { useTable } from "react-table";
+import "../assets/styles/table.scss";
 
-const Table = () => {
+const Table = ({ getCellProps }) => {
 	// --------------------------------------------
 	// Table data from endpoint
 	// --------------------------------------------
@@ -18,7 +19,7 @@ const Table = () => {
 			price: "$73430",
 			transaction_no: 1234567890,
 			time: "12:30",
-			status: "pending",
+			status: "reconciled",
 		},
 		{
 			item_type: "Apple Mac Book 15” 250 SSD 12GB",
@@ -32,7 +33,7 @@ const Table = () => {
 			price: "$73430",
 			transaction_no: 1234567890,
 			time: "12:30",
-			status: "pending",
+			status: "reconciled",
 		},
 		{
 			item_type: "Apple Mac Book 15” 250 SSD 12GB",
@@ -46,7 +47,7 @@ const Table = () => {
 			price: "$73430",
 			transaction_no: 1234567890,
 			time: "12:30",
-			status: "pending",
+			status: "unreconciled",
 		},
 		{
 			item_type: "Apple Mac Book 15” 250 SSD 12GB",
@@ -60,7 +61,7 @@ const Table = () => {
 			price: "$73430",
 			transaction_no: 1234567890,
 			time: "12:30",
-			status: "pending",
+			status: "unreconciled",
 		},
 		{
 			item_type: "Apple Mac Book 15” 250 SSD 12GB",
@@ -78,31 +79,28 @@ const Table = () => {
 		},
 	];
 
-	const columns = React.useMemo(
-		() => [
-			{
-				Header: "Item Type",
-				accessor: "item_type",
-			},
-			{
-				Header: "Price",
-				accessor: "price",
-			},
-			{
-				Header: "Transaction No",
-				accessor: "transaction_no",
-			},
-			{
-				Header: "Time",
-				accessor: "time",
-			},
-			{
-				Header: "Status",
-				accessor: "status",
-			},
-		],
-		[]
-	);
+	const columns = [
+		{
+			Header: "Item Type",
+			accessor: "item_type",
+		},
+		{
+			Header: "Price",
+			accessor: "price",
+		},
+		{
+			Header: "Transaction No",
+			accessor: "transaction_no",
+		},
+		{
+			Header: "Time",
+			accessor: "time",
+		},
+		{
+			Header: "Status",
+			accessor: "status",
+		},
+	];
 
 	const {
 		getTableProps,
@@ -125,19 +123,7 @@ const Table = () => {
 				{headerGroups.map((headerGroup) => (
 					<tr {...headerGroup.getHeaderGroupProps()}>
 						{headerGroup.headers.map((column) => (
-							<th
-								{...column.getHeaderProps()}
-								style={{
-									background: "#EAEEF0",
-									color: "#7F8FA4",
-									height: "42px",
-									fontSize: "1.4rem",
-									lineHeight: "19px",
-									fontWeight: "400",
-									textAlign: "left",
-									padding: "0 20px",
-								}}
-							>
+							<th {...column.getHeaderProps()}>
 								{column.render("Header")}
 							</th>
 						))}
@@ -152,15 +138,9 @@ const Table = () => {
 							{row.cells.map((cell) => {
 								return (
 									<td
-										{...cell.getCellProps()}
-										style={{
-											padding: "25px 20px",
-											fontSize: "1.4rem",
-											lineHeight: "19px",
-											background: "white",
-											color: "#414042",
-											borderBottom: "1px solid #CCCFD4",
-										}}
+										{...cell.getCellProps([
+											getCellProps(cell),
+										])}
 									>
 										{cell.render("Cell")}
 									</td>

@@ -151,7 +151,18 @@ const Dashboard = () => {
 						</select>
 					</div>
 				</div>
-				<Table />
+				<Table
+					getCellProps={(cellInfo) => ({
+						// -------------------------------------------------------
+						// Add classname Dynamically on cell value
+						// -------------------------------------------------------
+
+						className:
+							cellInfo.column.id === "status"
+								? `payment-status-${cellInfo.value}`
+								: null,
+					})}
+				/>
 
 				<div className="payments_table_pages">
 					<p>Showing 1 to 10 of 500 entries</p>

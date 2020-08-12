@@ -1,0 +1,46 @@
+th {
+	background: #eaeef0;
+	color: #7f8fa4;
+	height: 42px;
+	font-size: 1.4rem;
+	line-height: 19px;
+	font-weight: 400;
+	text-align: left;
+	padding: 0 20px;
+}
+
+td {
+	padding: 25px 20px;
+	font-size: 1.4rem;
+	line-height: 19px;
+	background: white;
+	color: #7f8fa4;
+	border-bottom: 1px solid #cccfd4;
+}
+
+td.payment-status-pending {
+	// border: 1px solid #cccfd4;
+	text-transform: capitalize;
+	color: #ebc315;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+td.payment-status-reconciled {
+	// border: 1px solid #cccfd4;
+	text-transform: capitalize;
+	color: #27ae60;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+td.payment-status-unreconciled {
+	// border: 1px solid #cccfd4;
+	text-transform: capitalize;
+	color: #7f8fa4;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+}

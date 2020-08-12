@@ -124,6 +124,31 @@ const Dashboard = () => {
 					</div>
 				</div>
 			</section>
+			<section className="payments_table">
+				<h2>Payments</h2>
+				<div className="payments_table_filters">
+					<p>Showing 20 out of 500 payments</p>
+
+					<label htmlFor="table_search">
+						<input
+							type="text"
+							name="table_search"
+							placeholder="Search payments"
+						/>
+					</label>
+
+					<div>
+						<p>Show</p>
+						<select name="payment_type">
+							<option>All</option>
+							<option>Reconciled</option>
+							<option>Un-reconciled</option>
+							<option>Settled</option>
+							<option>Unsettled</option>
+						</select>
+					</div>
+				</div>
+			</section>
 		</div>
 	);
 };

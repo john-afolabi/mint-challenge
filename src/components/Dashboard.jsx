@@ -7,6 +7,16 @@ import Search from "../assets/icons/search.svg";
 import Chart from "./Chart";
 import Table from "./Table";
 
+// -------------------------------------
+// Order data from endpoint
+// -------------------------------------
+const PendingOrders = 20;
+const ReconciledOrders = 80;
+const TotalOrders = 100;
+const UnreconciledPayments = 20;
+const ReconciledPayments = 80;
+const TotalPayments = 100;
+
 const Dashboard = () => {
 	return (
 		<div className="dashboard">
@@ -78,7 +88,7 @@ const Dashboard = () => {
                                 */}
 							<hr
 								style={{
-									width: "80%",
+									width: `${ReconciledOrders}%`,
 									backgroundColor: "#27AE60",
 									borderTopLeftRadius: "2px",
 									borderBottomLeftRadius: "2px",
@@ -86,15 +96,22 @@ const Dashboard = () => {
 							/>
 							<hr
 								style={{
-									width: "20%",
+									width: `${PendingOrders}%`,
 									backgroundColor: "#FDC203",
 									borderTopRightRadius: "2px",
 									borderBottomRightRadius: "2px",
 								}}
 							/>
-							<p>Pending Orders:</p>
-							<p>Reconciled Orders:</p>
-							<p>Total Orders:</p>
+							<p>
+								Pending Orders: <span>{PendingOrders}</span>
+							</p>
+							<p>
+								Reconciled Orders:{" "}
+								<span>{ReconciledOrders}</span>
+							</p>
+							<p>
+								Total Orders: <span>{TotalOrders}</span>
+							</p>
 						</div>
 
 						<div className="main_summary_card">
@@ -105,7 +122,7 @@ const Dashboard = () => {
                                 */}
 							<hr
 								style={{
-									width: "80%",
+									width: `${ReconciledPayments}%`,
 									backgroundColor: "#27AE60",
 									borderTopLeftRadius: "2px",
 									borderBottomLeftRadius: "2px",
@@ -113,15 +130,23 @@ const Dashboard = () => {
 							/>
 							<hr
 								style={{
-									width: "20%",
+									width: `${UnreconciledPayments}%`,
 									backgroundColor: "#FDC203",
 									borderTopRightRadius: "2px",
 									borderBottomRightRadius: "2px",
 								}}
 							/>
-							<p>Un-reconciled Payments:</p>
-							<p>Reconciled Payments:</p>
-							<p>Total Payments:</p>
+							<p>
+								Un-reconciled Payments:{" "}
+								<span>{UnreconciledPayments}</span>
+							</p>
+							<p>
+								Reconciled Payments:{" "}
+								<span>{ReconciledPayments}</span>
+							</p>
+							<p>
+								Total Payments: <span>{TotalPayments}</span>
+							</p>
 						</div>
 					</div>
 				</div>

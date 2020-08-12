@@ -151,8 +151,17 @@ const Dashboard = () => {
 						</select>
 					</div>
 				</div>
-				<div>
-					<Table />
+				<Table />
+
+				<div className="payments_table_pages">
+					<p>Showing 1 to 10 of 500 entries</p>
+
+					<div>
+						<button>Previous</button>
+						<button>1</button>
+						<button>2</button>
+						<button>Next</button>
+					</div>
 				</div>
 			</section>
 		</div>

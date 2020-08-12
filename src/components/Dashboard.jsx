@@ -3,7 +3,9 @@ import "../assets/styles/dashboard.scss";
 import SmallChart from "../assets/icons/small-chart.svg";
 import LeftButton from "../assets/icons/left-button.svg";
 import RightButton from "../assets/icons/right-button.svg";
+import Search from "../assets/icons/search.svg";
 import Chart from "./Chart";
+import Table from "./Table";
 
 const Dashboard = () => {
 	return (
@@ -130,6 +132,7 @@ const Dashboard = () => {
 					<p>Showing 20 out of 500 payments</p>
 
 					<label htmlFor="table_search">
+						<img src={Search} alt="search" />
 						<input
 							type="text"
 							name="table_search"
@@ -147,6 +150,9 @@ const Dashboard = () => {
 							<option>Unsettled</option>
 						</select>
 					</div>
+				</div>
+				<div>
+					<Table />
 				</div>
 			</section>
 		</div>
